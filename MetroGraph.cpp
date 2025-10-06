@@ -193,7 +193,7 @@ std::vector<std::string> MetroGraph::findMinInterchangesPath(const std::string& 
 
             if (newInterchanges < interchangeCount[v]) {
                 interchangeCount[v] = newInterchanges;
-                predecessors[v] = v_info.name == u_info.name ? predecessors[u] : u;
+                predecessors[v] = u;
                 pq.push({newInterchanges, dist + weight, v});
             }
         }
